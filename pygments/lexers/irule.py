@@ -1,4 +1,3 @@
-
 class iRuleLexer(RegexLexer):
     """
     For iRule source code.
