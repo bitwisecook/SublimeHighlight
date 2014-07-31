@@ -1,8 +1,6 @@
 class iRuleLexer(RegexLexer):
     """
     For iRule source code.
-
-    *New in Pygments 0.10.*
     """
 
     keyword_cmds_re = (
@@ -16,7 +14,7 @@ class iRuleLexer(RegexLexer):
     name = 'iRules'
     aliases = ['iRule']
     filenames = ['*.irul', '*.irule']
-    mimetypes = ['text/x-tcl', 'text/x-script.tcl', 'application/x-tcl']
+    mimetypes = ['text/x-irul', 'text/x-script.irule', 'text/x-script.iRule', 'application/x-irul']
 
     def _gen_command_rules(keyword_cmds_re, builtin_cmds_re, context=""):
         return [
