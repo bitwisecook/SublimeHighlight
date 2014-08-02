@@ -51,7 +51,7 @@ class RtfFormatter(Formatter):
             the same about modern...
         """
         Formatter.__init__(self, **options)
-        self.fontface = options.get('fontface') or 'Consolas'
+        self.fontface = options.get('fontface') or ''
 
     def _escape(self, text):
         return text.replace('\\', '\\\\') \
