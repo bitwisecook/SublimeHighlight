@@ -93,8 +93,21 @@ class RtfFormatter(Formatter):
                                         ''))
 
         # convert colors and save them in a mapping to access them later.
+        # add background colour as special first entry to cater 
+        # for styles with non white background
         color_mapping = {}
         offset = 1
+
+        bg_color = self.style.background_color[1:]
+        color_mapping[bg_color] = offset
+        outfile.write(r'\red%d\green%d\blue%d;' % (
+            int(bg_color[0:2], 16),
+            int(bg_color[2:4], 16),
+            int(bg_color[4:6], 16)
+        ))
+        offset += 1
+
+
         for _, style in self.style:
             for color in style['color'], style['bgcolor'], style['border']:
                 if color and color not in color_mapping:
@@ -106,6 +119,9 @@ class RtfFormatter(Formatter):
                     ))
                     offset += 1
         outfile.write(r'}\f0')
+
+        #create a box in order to allow background to show. Note we're using entry 1 in the table
+        outfile.write(r'\n\s0\box\brdrhair\brdrcf1\brsp317\cbpat1\cb1\fs18')
 
         # highlight stream
         for ttype, value in tokensource:
