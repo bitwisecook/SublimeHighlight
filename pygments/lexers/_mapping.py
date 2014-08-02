@@ -142,7 +142,6 @@ LEXERS = {
     'IoLexer': ('pygments.lexers.agile', 'Io', ('io',), ('*.io',), ('text/x-iosrc',)),
     'IokeLexer': ('pygments.lexers.jvm', 'Ioke', ('ioke', 'ik'), ('*.ik',), ('text/x-iokesrc',)),
     'IrcLogsLexer': ('pygments.lexers.text', 'IRC logs', ('irc',), ('*.weechatlog',), ('text/x-irclog',)),
-    'iRuleLexer': ('pygments.lexers.irule', 'iRule', ('irule',), ('*.irul','*.irule','*.iRule',), ('text/x-irul', 'text/x-script.irule', 'text/x-script.iRule', 'application/x-irul')),
     'JadeLexer': ('pygments.lexers.web', 'Jade', ('jade', 'JADE'), ('*.jade',), ('text/x-jade',)),
     'JagsLexer': ('pygments.lexers.math', 'JAGS', ('jags',), ('*.jag', '*.bug'), ()),
     'JavaLexer': ('pygments.lexers.jvm', 'Java', ('java',), ('*.java',), ('text/x-java',)),
@@ -308,6 +307,7 @@ LEXERS = {
     'XsltLexer': ('pygments.lexers.web', 'XSLT', ('xslt',), ('*.xsl', '*.xslt', '*.xpl'), ('application/xsl+xml', 'application/xslt+xml')),
     'XtendLexer': ('pygments.lexers.jvm', 'Xtend', ('xtend',), ('*.xtend',), ('text/x-xtend',)),
     'YamlLexer': ('pygments.lexers.text', 'YAML', ('yaml',), ('*.yaml', '*.yml'), ('text/x-yaml',)),
+    'iRuleLexer': ('pygments.lexers.irule', 'iRules', ('iRule',), ('*.irul', '*.irule'), ('text/x-irul', 'text/x-script.irule', 'text/x-script.iRule', 'application/x-irul')),
 }
 
 if __name__ == '__main__':

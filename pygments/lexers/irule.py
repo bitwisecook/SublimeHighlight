@@ -1,3 +1,15 @@
+import re
+
+from pygments.lexer import Lexer, RegexLexer, ExtendedRegexLexer, \
+     LexerContext, include, combined, do_insertions, bygroups, using, this
+from pygments.token import Error, Text, Other, \
+     Comment, Operator, Keyword, Name, String, Number, Generic, Punctuation
+from pygments.util import shebang_matches
+
+
+__all__ = ['iRuleLexer']
+
+
 class iRuleLexer(RegexLexer):
     """
     For iRule source code.
