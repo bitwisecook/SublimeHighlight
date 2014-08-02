@@ -1,3 +1,16 @@
+import re
+
+from pygments.lexer import Lexer, RegexLexer, ExtendedRegexLexer, \
+     LexerContext, include, combined, do_insertions, bygroups, using, this
+from pygments.token import Error, Text, Other, \
+     Comment, Operator, Keyword, Name, String, Number, Generic, Punctuation
+from pygments.util import get_bool_opt, get_list_opt
+from pygments import unistring as uni
+
+__all__ = ['iRuleLexer']
+
+line_re  = re.compile('.*?\n')
+
 class iRuleLexer(RegexLexer):
     """
     For iRule source code.
@@ -12,8 +25,8 @@ class iRuleLexer(RegexLexer):
         )
 
     name = 'iRules'
-    aliases = ['iRule']
-    filenames = ['*.irul', '*.irule']
+    aliases = ['iRules']
+    filenames = ['*.irul', '*.irule', '*.iRule']
     mimetypes = ['text/x-irul', 'text/x-script.irule', 'text/x-script.iRule', 'application/x-irul']
 
     def _gen_command_rules(keyword_cmds_re, builtin_cmds_re, context=""):
@@ -110,6 +123,3 @@ class iRuleLexer(RegexLexer):
             (r'.*\\\n', Comment),
         ],
     }
-
-    def analyse_text(text):
-        return shebang_matches(text, r'(tcl)')
