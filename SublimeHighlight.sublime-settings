@@ -18,6 +18,10 @@
     "lexer_options": {
         "PHP": {
             "startinline": true
+        },
+        "iRules": {
+            "tabsize": 4
         }
-    }
+    },
+    "fontface": "Consolas"
 }

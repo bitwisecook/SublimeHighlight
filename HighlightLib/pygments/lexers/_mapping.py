@@ -142,6 +142,7 @@ LEXERS = {
     'IoLexer': ('pygments.lexers.agile', 'Io', ('io',), ('*.io',), ('text/x-iosrc',)),
     'IokeLexer': ('pygments.lexers.jvm', 'Ioke', ('ioke', 'ik'), ('*.ik',), ('text/x-iokesrc',)),
     'IrcLogsLexer': ('pygments.lexers.text', 'IRC logs', ('irc',), ('*.weechatlog',), ('text/x-irclog',)),
+    'iRuleLexer': ('pygments.lexers.irule', 'iRules', ('iRule',), ('*.irul', '*.irule', '*.iRule'), ('text/x-irul', 'text/x-script.irule', 'text/x-script.iRule', 'application/x-irul')),
     'JadeLexer': ('pygments.lexers.web', 'Jade', ('jade', 'JADE'), ('*.jade',), ('text/x-jade',)),
     'JagsLexer': ('pygments.lexers.math', 'JAGS', ('jags',), ('*.jag', '*.bug'), ()),
     'JavaLexer': ('pygments.lexers.jvm', 'Java', ('java',), ('*.java',), ('text/x-java',)),
